@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Largest number here</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;background-color: #212121; color: #fff;
+        }
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);background-color: #212121; color: #fff;
+            padding: 30px;
+            border: none;
+        }
+
+        h3{
+            font-size: 20px;
+            margin: 20px;
+            padding: 30px;
+            font-weight: 700 ;
+        }
+        h2{
+            font-size: 25px;
+            margin: 20px;
+            padding: 30px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h3>
+            We are finding the Largest number.
+        </h3>
+        <h1>
+            We will show the results in Toggle Bar
+        </h1>
+    </div>
+
+    <script>
+
+        function Check(l, w, s) {
+            if (l>=w && l>=s){
+                return l;
+            }else if(w>=l && w>=s){
+                return w;
+            }else {
+                return s;
+            }
+        }
+
+        let a = prompt('Enter 1st value');
+        let b = prompt('Enter 2nd value');
+        let c = prompt('Enter 3rd value');
+        let y = Check(a,b,c);
+        alert(`${a},${b},${c} The Largest Number: ${y}`);
+
+    </script>
+</body>
+</html>

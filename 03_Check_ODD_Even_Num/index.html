@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check num is odd or even</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;background-color: #212121; color: #fff;
+        }
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: #212121; color: #fff;
+            padding: 20px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        .inp{
+        margin: 10px;
+        padding: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border: none;
+        cursor:pointer;
+    }
+
+    button{
+        padding: 7px;
+        margin: 8px;
+        height: 35px;
+        width: 150px;
+        background-color:blueviolet;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border: none;
+        font-size: 20px;
+        color: white;
+        transition: 0.3s;
+        animation-timing-function: linear;
+        cursor: pointer;
+    }
+
+    button:hover{
+        color: rgb(68, 37, 241);
+        background-color: violet;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div >
+            <input type="number" class="inp" id="data" placeholder="Add value">
+        </div>
+       <button onclick="convert()"> convert</button>
+        <p id="res">
+            Result:
+        </p>
+    </div>
+
+
+
+    <script>
+         
+                    // It is ternary Method to find out value
+
+        function convert() {
+            
+        let a = document.getElementById('data').value;
+
+         let res1 = a % 2 == 0 ? "Even" : "Odd"
+
+        document.getElementById('res').innerText = (`${a} is an ${res1} number`);
+    }
+
+                         // This is the if else Method to find out value
+        
+    // if (a%2 == 0){
+        //     // even
+        //     console.log(`${a} is an even number`);
+        // }else{
+        //     // odd
+        //     console.log(`${a} is an odd number`);
+        // }
+    </script>
+    
+</body>
+</html>

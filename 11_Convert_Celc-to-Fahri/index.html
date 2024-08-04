@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Celcius to fahrenheit</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;background-color: #212121; color: #fff;
+        }
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: #212121; color: #fff;
+            padding: 20px;
+            border: none;
+        }
+    
+        .inp{
+            margin: 10px;
+            padding: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor:pointer;
+        }
+    
+        button{
+            padding: 7px;
+            margin: 8px;
+            height: 35px;
+            width: 150px;
+            background-color:blueviolet;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            font-size: 20px;
+            color: white;
+            transition: 0.3s;
+            animation-timing-function: linear;
+            cursor: pointer;
+        }
+    
+        button:hover{
+            color: rgb(68, 37, 241);
+            background-color: violet;
+        }
+    
+        
+        h5{
+            font-size: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="input">
+            <input type="number" class="inp" id="Celc" placeholder="Celcius">
+            <!-- <p>To</p> -->
+            <!-- <input type="number" class="inp" id="Fahr" placeholder="Fahrenheit"> -->
+        </div>
+        <div>
+        <!--  --> <button onclick="convert()"  id="btn">Convert</button>
+        </div>
+        <div>
+        <p id="Res">
+            Results
+        </p>
+        </div>
+    </div>
+
+    <script>
+        
+        function convert() {
+            let c = document.getElementById('Celc').value;
+            let f = (c * 1.8) + 32;
+            document.getElementById('Res').innerText = `${c} Culcius = ${f} fahrenhiet`;
+            }
+
+            // function convert() {
+            // let f = document.getElementById('Fahr').value;
+            // let C = (f - 32)*5/9;
+            // document.getElementById('Res').innerText = `${f} Culcius = ${C} fahrenhiet`; 
+                
+            // }  
+        
+        
+//         let Cel = document.getElementById('Celc');
+//         let fah = document.getElementById('Fahr');
+//         let button = document.querySelector('#btn');
+// // console.log(Cel, fah, btn);
+//         button.addEventListener('click', () => {
+
+//             let f = (c * 1.8) + 32;
+//         //     // document.getElementById('Fahr').innerText 
+//         });
+        
+    </script>
+
+    
+</body>
+</html>

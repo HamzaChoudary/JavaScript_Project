@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap two number using & without using temperory variable</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;background-color: #212121; color: #fff;
+        }
+        h5{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h5>
+        Results: On Toggle Bar.
+    </h5>
+
+
+    <script>
+
+                // Here we using temperory variable
+
+        // let a = prompt('Enter a value');
+        // let b = prompt('Enter b value');
+        // console.log(`Before swapping, \n The value of a is: ${a}, \n  The value of b is: ${b}`);
+        // // a = 5 , b = 6
+        // // a = temp
+        // // temp = b
+        // let temp; 
+        // temp = a ;  
+        // a = b;  
+        // b = temp;  
+        // console.log(`After swapping, \n The value of a is : ${a}, \n The value of b is : ${b}`);
+
+
+                                // Without Using temporery Variable
+
+        let a = parseInt(prompt('Enter a value'));
+        let b = parseInt(prompt('Enter b value'));
+        alert(`Before swapping, \n The value of a is: ${a}, \n  The value of b is: ${b}`);
+        //   a = 5 b = 6
+        a = a + b;
+        b = a - b;
+        a = a - b;  
+        alert(`After swapping, \n The value of a is : ${a}, \n The value of b is : ${b}`);
+        
+
+    </script>
+    
+</body>
+</html>

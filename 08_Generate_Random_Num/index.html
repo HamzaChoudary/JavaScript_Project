@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentrate Random number</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;background-color: #212121; color: #fff;
+        }
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: #212121; color: #fff;        background-color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <p>In this program we are Gentrate the random values (Using Math.Random() and Math.floor )</p> -->
+
+    <div class="container">
+        <p id="res1">
+            Results:
+        </p>
+        <p id="res2">
+            Results:
+        </p>
+        <p id="res3">
+            Results:
+        </p>
+    </div>
+
+    <script>
+        let y = Math.random();
+        // document.write(y);
+        document.getElementById('res1').innerText = `Before Calculation : ${y.toFixed(4)} `
+
+        // Get Random Number Betweem Range
+        let x = y * (100 - 1 ) + 1;
+        document.getElementById('res2').innerText = `Before Calculation : ${x.toFixed(4)}`
+
+        // Get random integer Number between a Range
+        let  z = Math.floor(Math.random()*(1000 - 1)) + 1;
+        document.getElementById('res3').innerText = `Floor Calculation :${z} `
+    </script>
+    
+</body>
+</html>

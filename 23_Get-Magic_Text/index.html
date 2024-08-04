@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Rrogram</title>
+    <style>
+        body{
+            background-color: #212121; color: #fff;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
+        }
+        .btn{
+             border: none; outline: none; background-color: aliceblue; border-radius: 4px; text-align: center; font-weight: 600; margin: 20px; padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="btn" id="Magic">Get Magic</button>
+
+    <pre id="para" ></pre>
+
+    <!-- <img src="./Profile .png" hidden width="200" height="200" alt="Hamza_picture"> -->
+
+    <script>
+
+        let mag = document.getElementById('Magic').addEventListener('click', function() {
+
+            let Ele = document.createElement('pre');
+            let text = document.body.append('You’d be surprised how many mistakes you can spot from a single proofread. If you have a knack for editing, then you can proofread your cover letter yourself. But if you want to play it safe, it wouldn’t hurt to hire an editor for a thorough check of your cover letter. In any case, proofreading will help you get rid of minor mistakes and come across as more professional to HR professionals.');
+            Ele.append(text);
+            document.body.style.backgroundColor= '#212121';
+            document.body.style.color = '#fff';
+            document.body.style.margin = '25px';
+            // document.body.style.paddingInline = '15px';
+            document.body.style.fontSize = '2rem';
+
+
+            // let para = document.getElementById('para')
+            // para.style.backgroundColor = 'blue';
+            // let  img = document.querySelector('#img');
+            
+        })
+    </script>
+</body>
+</html>

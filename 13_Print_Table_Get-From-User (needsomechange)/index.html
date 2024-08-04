@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print the table get from user</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #212121; color: #fff;
+        }
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: #212121; color: #fff;
+            padding: 30px;
+            border: none;
+        }
+
+        h3{
+            font-size: 20px;
+            margin: 20px;
+            padding: 30px;
+            font-weight: 700 ;
+        }
+        h2{
+            font-size: 25px;
+            margin: 20px;
+            padding: 30px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h3>
+            We make table.
+        </h3>
+        <h1>
+            Result shown in Toggle Bar.
+        </h1>
+    </div>
+
+    <script>
+        
+        function table(number) {
+            let i;
+            let res;
+            for ( i = 1; i <= 10; i++) {
+                 res = i * number;
+                 document.write(`${number} x ${i} = ${res}`);
+            }
+        }
+        table(prompt());
+        // document.write
+        
+    </script>
+</body>
+</html>
