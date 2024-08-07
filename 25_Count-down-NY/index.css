@@ -1,26 +1,55 @@
+:root{
+    /* Purple: hsl(245, 55%, 55%) - Blue: hsl(210, 55%, 55%)
+    Pink: hsl(340, 55%, 55%) -Green: hsl(162, 55%, 55%) */
+
+    --hue: 210;
+    --first-color: hsl(var(--hue), 55%, 55%);
+    --first-color-light: hsl(var(--hue), 55%, 55%);
+    --first-color-alt: hsl(var(--hue), 50%, 50%);
+    --title-color: hsl(var(--hue), 30%, 95%);
+    --text-color: hsl(var(--hue), 20%, 80%);
+    --text-color-light: hsl(var(--hue), 20%, 70%);
+    --body-color: hsl(var(--hue), 40%, 16%);
+    --container-color: hsl(var(--hue), 40%, 20%);
+}
+
+
 body{
-    margin: 0; display: flex; flex-direction: column; align-items: center; height: 100vh; justify-content: center; 
-    font-family: cursive; background-color: slateblue; overflow: hidden;
+    margin: 0; display: flex; flex-direction: column; 
+    align-items: center; height: 100vh; 
+    justify-content: center; 
+    font-family: cursive; 
+    background-color: var(--body-color); overflow: hidden;
 }
 
 h2{
-    color: white; text-align: center; text-transform: uppercase; letter-spacing: 4px;
+    color: white; text-align: center; color: var(--title-color);
+    text-transform: uppercase; letter-spacing: 4px;
 }
 
 .year{
-    font-size: 5em; color: white; font-weight: bold;
+    font-size: 5em; color: var(--first-color); 
+    /* background-color: var(--title-color); */
+    font-weight: bold;
 }
 .countdown{
-    margin: 30px; background-color: rgba(0, 0, 0 0.1); width: 100%; color: white; height: 120px; display: flex; 
+    margin: 30px; 
+    background-color: var(--container-color); 
+    width: 100%; color: var(--title-color); height: 120px; display: flex; 
     justify-content: center; align-items: center;
 }
 .countdown div{
-    margin: 0 15px; font-size: 2.5em; font-weight: 500; margin: -25px; position: relative ; text-align: center;
+    margin: 0 15px; font-size: 2.5em;
+     font-weight: 500; margin: -25px; 
+     position: relative ; text-align: center;
     width: 100px;
 }
 .countdown div::before{
-    content: ""; position: absolute; bottom: -30px; left: 0; font-size: 0.35em; line-height: 35px; text-transform:
-     uppercase; letter-spacing: 1px; font-weight: 500; width: 100%; height: 35px;
+    content: ""; position: absolute; 
+    bottom: -30px; left: 0; font-size: 0.35em; 
+    line-height: 35px; text-transform:
+     uppercase; letter-spacing: 1px; font-weight: 500; 
+     width: 100%; height: 35px;
 }
 
 .countdown #day::before{

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide/SHow Passward</title>
+    <style>
+
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;"> 
+
+    <div class="container" style=" display: flex; justify-content: center; align-items: center;
+    height:100vh;">   
+    <input type="password" id="hide" style="padding: 10px; border-radius: 4px; border: none; outline: none;  margin: 3px;">
+        <input type="checkbox" id="show" style="position: relative; right: 5%;">
+</div>
+        <script>
+            const pwd = document.getElementById('hide');
+            const chk = document.getElementById('show');
+
+            chk.onchange = function() {
+                pwd.type = chk.checked ? "text" : "password";
+            };
+        </script>
+    
+</body>
+</html>

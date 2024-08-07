@@ -5,7 +5,7 @@ const minuteEl = document.getElementById('minute');
 const sceondEl = document.getElementById('second');
 // console.log(day);
 
-const newYearTime = new Date('Aug 5, 2024 12:00:00 PM').getTime();
+const newYearTime = new Date('Jan 1, 2025 12:00:01 am').getTime();
 
 updateCountDown();
 
