@@ -46,7 +46,7 @@
     <title>OPEN MODEL</title>
 </head>
 <body>
-    <!-- <img src="https://cdn.pixabay.com/photo/2024/01/02/10/33/stream-8482939_1280.jpg" alt="Image" width="maximum" height=""> -->
+
         <div class="container">
             <button class="open" id="open">Open Model</button>
              <div class="toggle" id="toggle">
@@ -57,12 +57,15 @@
 </body>
 <script>
 
+    
     const btn = document.querySelector('#open');
+    let toggle = document.querySelector('.toggle')
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', function notopen()  {
 
+        let tex = 'clicked anywhere to close model';
+        
         let indiv = document.getElementById('toggle')
-
 
         const  div = document.createElement('h1');
 
@@ -73,14 +76,21 @@
 
         const pre = document.createElement('pre');
 
-        let textPara = document.createTextNode(" Thirty words is a long sentence and should be considered the maximum");
+        let textPara = document.createTextNode(` Thirty words is a long  sentence and should be considered the maximum, \n ${tex}`);
         pre.appendChild(textPara)
 
         toggle.appendChild(pre)
         
         toggle.style.backgroundColor = 'White';
-    });
 
+});
+
+        toggle.addEventListener('click', () => {
+               toggle.remove();
+        });
+    
+
+    
 
 </script>
 </html>
