@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(https://cdn.pixabay.com/photo/2024/01/02/10/33/stream-8482939_1280.jpg);
+            background-color: #212121; color: white;
+
+        }
+        .container{
+            margin: 50px ;
+            position: absolute; top: 15%; left: 30%; transform: translate(-30% 20%); 
+        }
+        .open{
+            position:relative ;
+            padding: 12px;  font-size: 2rem;font-family: sans-serif; border-radius: 4px;  transition: ease-out .4s; background-color: #BF9D9D;
+            border: .3px solid white;
+        }
+
+        .open:hover{
+            content: " ";
+            position: absolute;
+            transform: translateY(-40%);
+            background-color:rgb(25 160 155 / 50%);
+            color: white;
+            border: none; outline: none;
+        }
+        .toggle{
+            /* background-color: #fff;*/ margin: 20px; padding: 10%;  color: black; overflow: hidden; width: max-content; border-radius: 6px;
+            margin-top: 30px;
+        }
+        .toggle h1{
+            font-size: 3rem; column-gap: 4rem; row-gap: 5rem;
+        }
+        pre{
+            font-size: 1.5rem; 
+        }
+    </style>
+    <title>OPEN MODEL</title>
+</head>
+<body>
+    <!-- <img src="https://cdn.pixabay.com/photo/2024/01/02/10/33/stream-8482939_1280.jpg" alt="Image" width="maximum" height=""> -->
+        <div class="container">
+            <button class="open" id="open">Open Model</button>
+             <div class="toggle" id="toggle">
+            </div>
+        </div>
+
+        
+</body>
+<script>
+
+    const btn = document.querySelector('#open');
+
+    btn.addEventListener('click', () => {
+
+        let indiv = document.getElementById('toggle')
+
+
+        const  div = document.createElement('h1');
+
+        let textN = document.createTextNode('Hello Worls!')
+        div.appendChild(textN)
+
+        indiv.appendChild(div)
+
+        const pre = document.createElement('pre');
+
+        let textPara = document.createTextNode(" Thirty words is a long sentence and should be considered the maximum");
+        pre.appendChild(textPara)
+
+        toggle.appendChild(pre)
+        
+        toggle.style.backgroundColor = 'White';
+    });
+
+
+</script>
+</html>
