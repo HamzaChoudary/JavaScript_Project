@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment & decrement</title>
+    <style>
+        body{
+            position: absolute; top:20%; left: 50%;  font-size: 3rem; background-color: #212121; color:white;
+        }
+        #CountNum{
+             color: white; font-size: 3rem;
+        }
+        #addbtn{
+            padding: .5em 1em; background-color: blue; font-size: 2rem; border: none; outline: none; border-radius: 4px;
+        }
+        #subbtn{
+            padding: .8em .7em; background-color: rgb(69, 238, 63); font-size: 2rem; border: none; outline: none; border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+        <h4 id="CountNum">0</h4>
+        <h4 id="CountNum"></h4>
+        <button id="addbtn">+</button>
+        <button id="subbtn">-</button>
+
+        <script>
+            const addbtnElement = document.getElementById('addbtn');
+            const subbtnElement = document.getElementById('subbtn');
+            const countDisplayElement = document.getElementById('CountNum');
+
+            let total = 0;
+            let limitadd = 20;
+            let limitsub = -10
+
+            const UpdateDisplay = () => {
+                if (total > limitadd) {
+                    total = limitadd
+                }
+                if (total < limitsub) {
+                    total = limitsub
+                }
+                countDisplayElement.textContent = total;
+            }
+
+            addbtnElement.addEventListener('click', () => {
+                
+                total += 1;
+                UpdateDisplay();
+            });
+            
+            subbtnElement.addEventListener('click', () => {
+                total -= 1;
+                UpdateDisplay();
+            });
+            
+        </script>
+</body>
+</html>
