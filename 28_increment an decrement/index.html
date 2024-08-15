@@ -42,6 +42,8 @@
                     total = limitsub
                 }
                 countDisplayElement.textContent = total;
+                // change color on every counte 
+                document.body.style.setProperty('background-color', `rgb(${(total / limitadd)* 255}, 64, 0)`);
             }
 
             addbtnElement.addEventListener('click', () => {
